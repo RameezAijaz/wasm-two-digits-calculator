@@ -1,0 +1,21 @@
+{
+  "name": "wasm-two-digits-calculator",
+  "collaborators": [
+    "Rameez <ramez.aijaz@gmail.com>"
+  ],
+  "description": "A simple 2 digits calculator",
+  "version": "0.1.0",
+  "license": "MIT/Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourgithubusername/hello-wasm"
+  },
+  "files": [
+    "wasm_two_digits_calculator_bg.wasm",
+    "wasm_two_digits_calculator.js",
+    "wasm_two_digits_calculator.d.ts"
+  ],
+  "module": "wasm_two_digits_calculator.js",
+  "types": "wasm_two_digits_calculator.d.ts",
+  "sideEffects": false
+}
