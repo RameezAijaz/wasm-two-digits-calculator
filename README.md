@@ -3,6 +3,9 @@ Simple Rust WebAssembly example.
 
 ![logo](https://cdn-images-1.medium.com/max/1600/1*BfUvDZ4-7Yo-YwMOTNEbMA.png "logo")
 
+# Demo
+https://rameezaijaz.com/wasm-two-digits-calculator/
+
 # Install Dependencies
 
 1. Install Rust following [these instructions](https://www.rust-lang.org/tools/install).
