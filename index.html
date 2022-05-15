@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <style>
+        #calculator{
+            text-align: center;
+            margin-top: 100px;
+        }
+        button{
+            margin: 2px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="calculator">
+<label for="firstNumber">
+    1st Number :
+</label><input type="text" id="firstNumber" /><br><br>
+<label for="secondNumber">
+    2nd Number:
+</label><input type="text" id="secondNumber" /><br><br>
+<button id="addButton">Add</button>
+<button id="subtractButton">Subtract</button>
+<button id="multiplyButton">Multiply</button>
+<button id="divideButton">Divide</button>
+</div>
+<script type="module">
+    import init, { add, subtract, multiply, divide } from "./pkg/wasm_two_digits_calculator.js";
+    init()
+        .then(() => {
+            //getting elements
+            const firstNumberElement = document.getElementById("firstNumber");
+            const secondNumberElement = document.getElementById("secondNumber");
+            const addButton = document.getElementById("addButton");
+            const subtractButton = document.getElementById("subtractButton");
+            const multiplyButton = document.getElementById("multiplyButton");
+            const divideButton = document.getElementById("divideButton");
+
+            //binding onclick
+            addButton.onclick = ()=>{
+                const firstNumber = parseInt(firstNumberElement.value);
+                const secondNumber = parseInt(secondNumberElement.value);
+                add(firstNumber, secondNumber)
+            };
+            subtractButton.onclick = ()=>{
+                const firstNumber = parseInt(firstNumberElement.value);
+                const secondNumber = parseInt(secondNumberElement.value);
+                subtract(firstNumber, secondNumber)
+            };
+            multiplyButton.onclick = ()=> {
+                const firstNumber = parseInt(firstNumberElement.value);
+                const secondNumber = parseInt(secondNumberElement.value);
+                multiply(firstNumber, secondNumber)
+            };
+            divideButton.onclick = ()=>{
+                const firstNumber = parseInt(firstNumberElement.value);
+                const secondNumber = parseInt(secondNumberElement.value);
+                divide(firstNumber, secondNumber)
+            };
+        });
+</script>
+</body>
+</html>
